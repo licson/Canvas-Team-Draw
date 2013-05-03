@@ -1,0 +1,34 @@
+{
+  "name": "Canvas-Team-Draw",
+  "version": "1.0.0",
+  "description": "Cooperative draw app",
+  "keywords": [
+    "canvas",
+    "draw",
+    "team",
+    "websocket"
+  ],
+  "author": {
+    "name": "Licson Lee",
+    "email": "licson0729@gmail.com",
+    "url":  "http://serve-licson.net23.net/"
+  },
+  "homepage": "https://teamdraw-licson.rhcloud.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://gitub.com/openshift/origin-server"
+  },
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "server.js"
+}

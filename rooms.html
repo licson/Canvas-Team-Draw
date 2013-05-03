@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8">
+		<title>All rooms - Canvas Team Paint</title>
+		<link href="//fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet" type="text/css">
+		<link href="bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="bootstrap-responsive.css" rel="stylesheet" type="text/css">
+		<link href="styles.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="navnar navbar-inverse navbar-static-top">
+			<div class="navbar-inner">
+				<a href="/" class="brand">Canvas Team Draw</a>
+			</div>
+		</div>		
+		<div class="container">
+			<h1>All rooms</h1>
+			<ul class="thumbnails">
+				<%
+				var count = 0;
+				for(var i in rooms){
+					if(i === '') continue;
+					count++;
+				%>
+				<li class="span4">
+					<div class="thumbnail">
+						<a href="./#<%= i.substr(1) %>">Room <%= i.substr(1) %></a>
+						<h3><%= rooms[i].length %> users.</h3>
+						<a href="#" data-toggle="collapse" data-target="#users-<%= count %>">Show all users in this room <i class="carat"></i></a>
+						<div id="users-<%= count %>" class="collapse">
+							<ul>
+								<% for(var j = 0; j < rooms[i].length; j++){ %>
+								<li>User <%= rooms[i][j] %></li>
+								<% } %>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<% }
+				if(count === 0){
+				%>
+				<em class="muted">No rooms yet.</em>
+				<% } %>
+			</ul>
+		</div>
+		<footer class="footer">
+			<p>Canvas Team Draw is created by <a href="http://serve-licson.net23.net/">Licson</a>.</p>
+		</footer>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+	</body>
+</html>
