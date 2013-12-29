@@ -3,11 +3,11 @@
   <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta charset="utf-8">
-		<title>All rooms - Canvas Team Paint</title>
+		<title>Lobby - Canvas Team Draw</title>
 		<link href="//fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet" type="text/css">
-		<link href="bootstrap.css" rel="stylesheet" type="text/css">
-		<link href="bootstrap-responsive.css" rel="stylesheet" type="text/css">
-		<link href="styles.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="bootstrap.min.js"></script>
 	</head>
@@ -18,7 +18,7 @@
 			</div>
 		</div>		
 		<div class="container">
-			<h1>All rooms</h1>
+			<h1>Lobby</h1>
 			<ul class="thumbnails">
 				<%
 				var count = 0;
@@ -43,7 +43,7 @@
 				<% }
 				if(count === 0){
 				%>
-				<em class="muted">No rooms yet.</em>
+				<em class="muted">No rooms yet. <a href="/">Create your room!</a></em>
 				<% } %>
 			</ul>
 		</div>
