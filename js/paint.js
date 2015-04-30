@@ -93,8 +93,8 @@
 				}
 				e.type = e.type.replace('touch', 'mouse').replace('start', 'down').replace('end', 'up');
 			} else {
-				e._x = e.offsetX;
-				e._y = e.offsetY;
+				e._x = e.pageX - $('#container').offset().left;
+				e._y = e.pageY - $('#container').offset().top;
 			}
 
 			// Call the event handler of the tool.
